@@ -14,7 +14,6 @@
 
   |Column|Type|Options|
   |------|----|-------|
-  |group_id|integer|foreign_key: true|
   |name|string|null: false, index: true|
   |mail|string|null: false|
 
@@ -28,8 +27,7 @@
 
   |Column|Type|Options|
   |------|----|-------|
-  |user_id|integer|foreign_key: true|
-  |message_id|integer|foreign_key: true|
+  |name|string|null: false, index: true|
   
 ### Association
 - has_many :users through:  :groups_users
@@ -42,7 +40,7 @@
   |------|----|-------|
   |user_id|integer|null: false,foreign_key: true|
   |group_id|integer|null: false,foreign_key: true|
-  |body|text|null: false,index: true|
+  |body|text||
   |image|text||
   
 ### Association
