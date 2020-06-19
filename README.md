@@ -40,8 +40,8 @@
 
   |Column|Type|Options|
   |------|----|-------|
-  |user_id|integer|foreign_key: true|
-  |message_id|integer|foreign_key: true|
+  |user_id|integer|null: false,foreign_key: true|
+  |message_id|integer|null: false,foreign_key: true|
   |body|text|null: false,index: true|
   |image|text||
   
