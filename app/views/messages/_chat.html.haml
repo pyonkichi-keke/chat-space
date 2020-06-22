@@ -1,0 +1,47 @@
+.chat
+  .chat__head
+    .chat__head__group
+      .chat__head__group__name
+        test
+      .chat__head__group__member
+        Menber : masa
+    .chat__head__edit
+      = link_to '#', class: "edit" do
+        Edit
+
+  .chat__main
+    .chat__main__list
+      .chat__main__list__head
+        .chat__main__list__head__name
+          おはよう
+        .chat__main__list__head__date
+          2020/6/22(mon) 14:45
+      .chat__main__list__message
+        今日は夜から雨
+
+    .chat__main__list
+      .chat__main__list__head
+        .chat__main__list__head__name
+          おはよう
+        .chat__main__list__head__date
+          2020/6/22(mon) 14:45
+      .chat__main__list__message
+        今日は夜から雨
+
+    .chat__main__list
+      .chat__main__list__head
+        .chat__main__list__head__name
+          おはよう
+        .chat__main__list__head__date
+          2020/6/22(mon) 14:45
+      .chat__main__list__message
+        今日は夜から雨  
+
+  .chat__footer
+    .chat__footer__form
+      %input{type: "text", placeholder: "type a message", class: "chat__footer__form__text"} 
+      %label{class: "chat__footer__form__text__label"}
+        = icon('fas', 'image', class: "form-icon")
+        %input{type: "file", class:"file"}
+    %input{type: "submit", value: "Send", class: "chat__footer__form__send"}
+
