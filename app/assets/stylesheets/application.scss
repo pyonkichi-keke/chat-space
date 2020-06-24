@@ -1,8 +1,11 @@
 @import "reset";
-@import "modules/chat";
-@import "modules/side";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// @import "modules/messages";
+@import "modules/user";
+@import "modules/flash";
+@import "modules/chat";
+@import "modules/side";
 
 *{
   box-sizing: border-box;
