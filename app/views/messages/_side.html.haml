@@ -1,29 +1,22 @@
 .side
- .side__head
-  .side__head__list
-   .side__head__list__name
-    = current_user.name
-   .side__head__list__icon
-    = link_to '#', class: "edit-none" do
-     =icon('far', 'edit', class: "side-edit") 
-    = link_to edit_user_path(current_user.id), class: "cog" do
-     =icon('fa', 'cog', class: "cog")
+  .side__head
+    .side__head__list
+      .side__head__list__name
+        = current_user.name
+      .side__head__list__icon
+        = link_to new_group_path, class: "edit-none" do
+          =icon('far', 'edit', class: "side-edit") 
+        = link_to edit_user_path(current_user.id), class: "cog" do
+          =icon('fa', 'cog', class: "cog")
 
- .side__main
-  .side__main__list
-   .side__main__list__name
-    techcamp
-   .side__main__list__message
-    まだメッセージがありません
+  .side__main
+    .side__main__list
+      - current_user.groups.each do |group|
+        = link_to edit_group_path(group.id)  do
+          .side__main__list__name
+            = group.name
+          .side__main__list__message
+            まだメッセージがありません  
+      
 
-  .side__main__list
-   .side__main__list__name
-    techcamp
-   .side__main__list__message
-    まだメッセージがありません
-
-  .side__main__list
-   .side__main__list__name
-    techcamp
-   .side__main__list__message
-    まだメッセージがありません
+  
