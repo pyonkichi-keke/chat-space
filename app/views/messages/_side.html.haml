@@ -10,13 +10,13 @@
           =icon('fa', 'cog', class: "cog")
 
   .side__main
-    .side__main__list
-      - current_user.groups.each do |group|
-        = link_to edit_group_path(group.id)  do
+    - current_user.groups.each do |group|
+      .side__main__list
+        = link_to group_messages_path(group), class: "list" do
           .side__main__list__name
             = group.name
           .side__main__list__message
-            まだメッセージがありません  
+            = group.show_last_message   
       
 
   
