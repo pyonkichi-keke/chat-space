@@ -15,7 +15,7 @@
     = render @messages
 
   .chat__footer
-    = form_with model: [@group, @message], class: "form",local: true do |f|
+    = form_with model: [@group, @message], class: "form", local: true do |f|
       .chat__footer__form
         = f.text_field :content, placeholder: "type a message", class: "chat__footer__form__text" 
         = f.label :image, class: "chat__footer__form__text__label" do
