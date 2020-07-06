@@ -36,7 +36,11 @@ $(function(){
 
 
   let reloadMessages = function(){
-    let last_message_id = $('.chat__main__list:last').data("message-id");
+    let last_message_id = $('.chat__main__list:last').data("message-id");  
+    if(last_message_id == undefined){
+      last_message_id = 0
+    };
+    console.log(last_message_id)
     $.ajax({
       url: 'api/messages',
       type: 'get',
@@ -51,6 +55,9 @@ $(function(){
         });
         $('.chat__main').append(insertHTML);
         $('.chat__main').animate({scrollTop: $('.chat__main')[0].scrollHeight });
+      }
+      else if (messages.length == 0){
+
       }
     })
     .fail(function() {
