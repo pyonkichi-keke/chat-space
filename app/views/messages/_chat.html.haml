@@ -4,11 +4,11 @@
       .chat__head__group__name
         = @group.name
       .chat__head__group__member
-        Menber : 
+        Member : 
         - @group.users.each do |user|
           = user.name
     .chat__head__edit
-      = link_to edit_group_path(@group.id), class: "edit" do
+      = link_to edit_group_path(@group.id), class: "chat__head__edit--icon" do
         Edit
 
   .chat__main
