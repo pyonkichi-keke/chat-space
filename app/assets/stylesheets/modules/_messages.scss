@@ -13,6 +13,7 @@
       height: 100px;
       display: flex;
       justify-content: space-between;
+      border-bottom: solid 1px #eeeeee;
       &__group{
         &__name{
           color: #333333;
@@ -26,7 +27,7 @@
         }
       }
       &__edit{
-        background-color: #38aef0;
+        border: 1px solid #38aef0;
         font-size: 16px;
         height: 40px;
         width: 72px;
@@ -35,6 +36,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        &--icon{
+          color: #38aef0;
+          text-decoration: none;
+        }
       }
     }
     &__main{
@@ -123,7 +128,7 @@
       }
     }
     &__main{
-      overflow:scroll;
+      overflow: scroll;
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       color: #ffffff;
